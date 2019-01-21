@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".PollActivity"
+    tools:showIn="@layout/activity_poll">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:id="@+id/mainRelativeLayout">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/voteMessageText"
+            android:visibility="gone"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/voteMessageText"
+            android:id="@+id/radioLinearLayout"
+            android:visibility="gone"
+            android:layout_height="match_parent">
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/radioGroup">
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/textLinearLayout"
+            android:layout_marginTop="7dp"
+            android:layout_below="@+id/voteMessageText"
+            android:layout_toEndOf="@+id/radioLinearLayout"
+            android:visibility="gone"
+            android:layout_height="match_parent">
+        </LinearLayout>
+
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/voteButton"
+            android:layout_below="@id/textLinearLayout"
+            android:layout_centerVertical="true"
+            android:text="Vote"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:id="@+id/messageTextView"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/invisibleButton"
+            android:text="invisible text button"
+            android:layout_below="@+id/voteButton"
+            android:visibility="invisible"/>
+
+
+
+    </RelativeLayout>
+
+
+
+
+</android.support.v4.widget.NestedScrollView>

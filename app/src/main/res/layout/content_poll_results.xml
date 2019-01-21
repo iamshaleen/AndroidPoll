@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".PollResultsActivity"
+    tools:showIn="@layout/activity_poll_results">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_height="wrap_content">
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/chart"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_width="match_parent"
+            android:layout_height="400dp" />
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/chart1"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/savebutton"
+            android:textColor="@color/white"
+            android:text="Save Result Images"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="15dp"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:background="@color/btn_logut_bg"/>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
